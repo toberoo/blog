@@ -1,0 +1,9 @@
+{
+    "name": "blog",
+    "version": "1.0.0",
+    "dependencies": {
+        "materialize": "latest",
+        "font-awesome": "latest",
+        "directory": "./UI/"
+    }
+}

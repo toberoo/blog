@@ -1,3 +1,8 @@
-require('file?name=index.html!./index.html');
+//Load html page
+require('./index.html');
 
-document.write('Welcome to my blog');
+class Dog {
+
+}
+
+document.write('Hello');
