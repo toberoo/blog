@@ -20,6 +20,7 @@ module.exports = {
     },
     module: {
         loaders: [
+            //JS files: react, redux, ect...
             {
             	loader: 'babel',
             	include: PATHS.ui,
@@ -32,9 +33,15 @@ module.exports = {
                 include: PATHS.ui,
                 test: /\.html/
             },
+            //Styles
             {
                 loaders: ['style', 'css', 'sass'],
                 test: /\.scss$/
+            },
+            //Fonts
+            {
+                loader: 'url?limit=10000&name=[name].[ext]',
+                test: /\.(ttf|eot|svg|woff|woff2)$/
             }
         ]
     },
