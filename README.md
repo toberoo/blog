@@ -1,0 +1,1 @@
+My blog application using react, redux, webpack, node, express, mongodb, and sass.
