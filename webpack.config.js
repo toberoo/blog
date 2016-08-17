@@ -4,15 +4,19 @@ const webpack = require('webpack');
 const PATHS = {
     ui: path.join(__dirname, 'UI'),
     app: path.join(__dirname, 'UI', 'app.jsx'),
-    assets: path.join(__dirname, 'dist/assets'),
+    assets: path.join(__dirname, 'dist'),
     vendor: path.join(__dirname, 'UI', 'vendor.jsx'),
     node_modules: path.join(__dirname, 'node_modules')
 };
 
 module.exports = {
     entry: {
-        app: PATHS.app,
-        vendor: PATHS.vendor
+        app: [
+            PATHS.app,
+            'webpack-dev-server/client?http://0.0.0.0:8080',
+            'webpack/hot/only-dev-server'
+        ],
+        vendor: PATHS.vendor,
     },
     output: {
         path: PATHS.assets,

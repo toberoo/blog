@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node nodemo"
+    "start": "webpack-dev-server --progress --inline --hot"
   },
   "author": "Shehroze Khan <toberoo@gmail.com>",
   "license": "ISC",
@@ -38,6 +38,7 @@
     "react-dom": "^15.3.0",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
-    "redux-logger": "^2.6.1"
+    "redux-logger": "^2.6.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }
