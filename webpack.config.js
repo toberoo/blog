@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const PATHS = {
     ui: path.join(__dirname, 'UI'),
     app: path.join(__dirname, 'UI', 'app.jsx'),
-    dist: path.join(__dirname, 'dist'),
+    assets: path.join(__dirname, 'dist/assets'),
     vendor: path.join(__dirname, 'UI', 'vendor.jsx'),
     node_modules: path.join(__dirname, 'node_modules')
 };
@@ -12,10 +12,10 @@ const PATHS = {
 module.exports = {
     entry: {
         app: PATHS.app,
-        vendor: [PATHS.vendor]
+        vendor: PATHS.vendor
     },
     output: {
-        path: PATHS.dist,
+        path: PATHS.assets,
         filename: "bundle.js"
     },
     module: {

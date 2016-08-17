@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node nodemo"
   },
   "author": "Shehroze Khan <toberoo@gmail.com>",
   "license": "ISC",
@@ -16,6 +17,8 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.23.1",
     "eslint": "^3.3.1",
     "eslint-loader": "^1.5.0",
