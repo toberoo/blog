@@ -3,9 +3,9 @@ const webpack = require('webpack');
 
 const PATHS = {
     ui: path.join(__dirname, 'UI'),
-    app: path.join(__dirname, 'UI', 'app.js'),
+    app: path.join(__dirname, 'UI', 'app.jsx'),
     dist: path.join(__dirname, 'dist'),
-    vendor: path.join(__dirname, 'UI', 'vendor.js'),
+    vendor: path.join(__dirname, 'UI', 'vendor.jsx'),
     node_modules: path.join(__dirname, 'node_modules')
 };
 
@@ -19,13 +19,20 @@ module.exports = {
         filename: "bundle.js"
     },
     module: {
-        loaders: [
-            //JS files: react, redux, ect...
+        preLoaders: [
             {
-            	loader: 'babel',
-            	include: PATHS.ui,
+                loader:  "eslint-loader",
+                include: PATHS.ui,
+                test: /\.jsx/
+            }
+        ],
+        loaders: [
+            //JSX
+            {
+                loader:  "babel",
+                include: PATHS.ui,
                 exclude: PATHS.node_modules,
-            	test: /\.jsx/
+                test: /\.jsx/
             },
             //Html files
             {
