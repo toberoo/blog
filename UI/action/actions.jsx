@@ -1,5 +1,3 @@
-const constants = require('./const.jsx')
+import HeaderActions from './header.jsx'
 
-module.exports = {
-	
-}
+export default Object.assign({}, HeaderActions)
