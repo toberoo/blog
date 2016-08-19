@@ -20,7 +20,7 @@ function getVisiblePage(state, selected) {
 
 module.exports = function(state = initialState, action) {
 	switch(action.type) {
-		
+
 		case constants.CHANGE_HEADER_COLOUR: {
 			return Object.assign({}, state, {
 				headerColour: action.val
