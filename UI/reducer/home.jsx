@@ -9,7 +9,7 @@ function getVisiblePage(state, selected) {
 	return Object.assign({}, state, {
 		showAbout: selected === constants.PAGES.ABOUT ? true: false,
 		showLit: selected === constants.PAGES.LIT ? true: false,
-		showPhil: selected === constants.PAGES.PHIL ? true: false,
+		showRamb: selected === constants.PAGES.RAMB ? true: false,
 		showProg: selected === constants.PAGES.PROG ? true: false,
 		showMovie: selected === constants.PAGES.MOVIE ? true: false,
 		showMusic: selected === constants.PAGES.MUSIC ? true: false,

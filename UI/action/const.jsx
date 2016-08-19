@@ -5,10 +5,10 @@ module.exports = {
 	PAGES: {
 		ABOUT: 'about',
 		LIT: 'literature',
-		PHIL: 'philosophy',
 		PROG: 'programming',
 		MOVIE: 'movies',
 		MUSIC: 'music',
+		RAMB: 'ramblings',
 		TV: 'television',
 		GAME: 'games'
 	}

@@ -28,10 +28,10 @@ const showLitPage = () => {
 	}
 }
 
-const showPhilPage = () => {
+const showRambPage = () => {
 	return (dispatch) => {
 		dispatch(changeHeaderColour('red lighten-2'))
-		dispatch(showPage(constants.PAGES.PHIL))
+		dispatch(showPage(constants.PAGES.RAMB))
 	}
 }
 
@@ -75,7 +75,7 @@ module.exports = {
 	changeHeaderColour,
 	showAboutPage,
 	showLitPage,
-	showPhilPage,
+	showRambPage,
 	showProgPage,
 	showMoviePage,
 	showMusicPage,

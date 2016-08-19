@@ -39,15 +39,6 @@ const HeaderComponent = ({home, actions}) => {
 					</a>
 				</div>
 			</li>
-			<li className={home.showPhil ? 'active' : ''}>
-				<div className="center-align hoverable">
-					<a href="#" className="waves-effect waves-red" onClick={() => {
-						actions.showPhilPage();
-					}}>
-						<b>Philosophy</b>
-					</a>
-				</div>
-			</li>
 			<li className={home.showProg ? 'active' : ''}>
 				<div className="center-align hoverable">
 					<a href="#" className="waves-effect waves-purple" onClick={() => {
@@ -72,6 +63,15 @@ const HeaderComponent = ({home, actions}) => {
 						actions.showMusicPage();
 					}}>
 						<b>Music</b>
+					</a>
+				</div>
+			</li>
+			<li className={home.showRamb ? 'active' : ''}>
+				<div className="center-align hoverable">
+					<a href="#" className="waves-effect waves-red" onClick={() => {
+						actions.showRambPage();
+					}}>
+						<b>Ramblings</b>
 					</a>
 				</div>
 			</li>
