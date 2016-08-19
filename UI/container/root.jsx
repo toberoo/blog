@@ -1,18 +1,20 @@
 import React, { Component} from 'react'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import HomePage from './../component/homePage.jsx'
+import Main from './../component/main.jsx'
 import actions from './../action/actions.jsx'
 
 class RootContainer extends Component  {
 	render() {
-		return <HomePage home={this.props.home} actions={this.props.actions}/>
+		return <Main home={this.props.home} actions={this.props.actions}>
+		</Main>
 	}
 }
 
 function mapStateToProps(state) {
 	return {
-		home: state.home
+		home: state.home,
+		routing: state.routing
 	}
 }
 

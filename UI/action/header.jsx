@@ -1,3 +1,5 @@
+import { routeActions } from 'redux-simple-router'
+
 const constants = require('./const.jsx')
 
 const changeHeaderColour = (val) => {
@@ -18,6 +20,7 @@ const showAboutPage = () => {
 	return (dispatch) => {
 		dispatch(changeHeaderColour('black'))
 		dispatch(showPage(constants.PAGES.ABOUT))
+		dispatch(routeActions.push('/'))
 	}
 }
 
