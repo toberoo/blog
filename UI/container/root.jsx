@@ -7,6 +7,7 @@ import actions from './../action/actions.jsx'
 class RootContainer extends Component  {
 	render() {
 		return <Main home={this.props.home} actions={this.props.actions}>
+			{this.props.children}
 		</Main>
 	}
 }
@@ -14,7 +15,7 @@ class RootContainer extends Component  {
 function mapStateToProps(state) {
 	return {
 		home: state.home,
-		routing: state.routing
+		location: state.routing.location
 	}
 }
 

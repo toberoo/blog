@@ -21,10 +21,20 @@ const HeaderComponent = ({home, actions}) => {
 				<label><i className="material-icons">search</i></label>
 				<i className="material-icons">close</i>
 			</li>
+			<li>
+				<div className="container">
+					<div className="row center">
+						<div className="col s4">1</div>
+						<div className="col s4">2</div>
+						<div className="col s4">3</div>
+					</div>
+				</div>
+			</li>
 			<li className={home.showAbout ? 'active' : ''}>
 				<div className="center-align hoverable">
-					<a href="#" className="waves-effect" onClick={() => {
-						actions.showAboutPage();
+					<a href="#" className="waves-effect" onClick={(e) => {
+						e.preventDefault()
+						actions.showAboutPage()
 					}}>
 						<b>About</b>
 					</a>

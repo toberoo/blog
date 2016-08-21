@@ -18,9 +18,15 @@ const showPage = (val) => {
 
 const showAboutPage = () => {
 	return (dispatch) => {
+		dispatch(routeActions.push('about'))
+		dispatch(loadAboutPage())
+	}
+}
+
+const loadAboutPage = () => {
+	return (dispatch) => {
 		dispatch(changeHeaderColour('black'))
 		dispatch(showPage(constants.PAGES.ABOUT))
-		dispatch(routeActions.push('/'))
 	}
 }
 

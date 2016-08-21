@@ -8,7 +8,7 @@ import store from './store.jsx'
 require('./index.html')
 
 //Get the router stuff
-import { Router, Route, browserHistory } from 'react-router'
+import { Router, Route, hashHistory } from 'react-router'
 
 //Get the root container
 import Root from './container/root.jsx'
@@ -18,9 +18,9 @@ import About from './component/about.jsx'
 
 render(
   <Provider store={store}>
-      <Router history={browserHistory}>
+      <Router history={hashHistory}>
         	<Route path="/" component={Root}>
-        		<Route path="/#/about" component={Root}/>
+        		<Route path="/about" component={About}/>
         	</Route>
       </Router>
   </Provider>,
