@@ -22,28 +22,36 @@ const HeaderComponent = ({home, actions}) => {
 				<i className="material-icons">close</i>
 			</li>
 			<li>
-				<div className={home.headerColour != 'black' ? home.headerColour + ' card' : ' card'}>
-					<div className="row center">
-						<div className="col s3">
-							<a href={home.twitterURL}>
-								<i className="fa fa-twitter fa-2x"></i>
-							</a>
-						</div>
-						<div className="col s3">
-							<a href="http://google.com">
-								<i className="fa fa-instagram fa-2x"></i>
-							</a>
-						</div>
-						<div className="col s3">
-							<a href={home.soundcloudURL}>
-								<i className="fa fa-soundcloud fa-2x"></i>
-							</a>
-						</div>
-						<div className="col s3">
-							<a href="http://google.com">
-								<i className="fa fa-linkedin fa-2x"></i>
-							</a>
-						</div>
+				<div className="row center">
+					<div className="col s4">
+						<a href={home.twitterURL}>
+							<i className="fa fa-twitter fa-2x"></i>
+						</a>
+					</div>
+					<div className="col s4">
+						<a href="http://google.com">
+							<i className="fa fa-instagram fa-2x"></i>
+						</a>
+					</div>
+					<div className="col s4">
+						<a href={home.soundcloudURL}>
+							<i className="fa fa-soundcloud fa-2x"></i>
+						</a>
+					</div>
+					<div className="col s4">
+						<a href="http://google.com">
+							<i className="fa fa-linkedin fa-2x"></i>
+						</a>
+					</div>
+					<div className="col s4">
+						<a href="http://google.com">
+							<i className="fa fa-github fa-2x"></i>
+						</a>
+					</div>
+					<div className="col s4">
+						<a href="http://google.com">
+							<i className="fa fa-youtube fa-2x"></i>
+						</a>
 					</div>
 				</div>
 			</li>
