@@ -22,15 +22,32 @@ const HeaderComponent = ({home, actions}) => {
 				<i className="material-icons">close</i>
 			</li>
 			<li>
-				<div className="container">
+				<div className={home.headerColour != 'black' ? home.headerColour + ' card' : ' card'}>
 					<div className="row center">
-						<div className="col s4">1</div>
-						<div className="col s4">2</div>
-						<div className="col s4">3</div>
+						<div className="col s3">
+							<a href={home.twitterURL}>
+								<i className="fa fa-twitter fa-2x"></i>
+							</a>
+						</div>
+						<div className="col s3">
+							<a href="http://google.com">
+								<i className="fa fa-instagram fa-2x"></i>
+							</a>
+						</div>
+						<div className="col s3">
+							<a href={home.soundcloudURL}>
+								<i className="fa fa-soundcloud fa-2x"></i>
+							</a>
+						</div>
+						<div className="col s3">
+							<a href="http://google.com">
+								<i className="fa fa-linkedin fa-2x"></i>
+							</a>
+						</div>
 					</div>
 				</div>
 			</li>
-			<li className={home.showAbout ? 'active' : ''}>
+			<li className={home.showAbout ? 'card' : ''}>
 				<div className="center-align hoverable">
 					<a href="#" className="waves-effect" onClick={(e) => {
 						e.preventDefault()
@@ -40,7 +57,7 @@ const HeaderComponent = ({home, actions}) => {
 					</a>
 				</div>
 			</li>
-			<li className={home.showLit ? 'active' : ''}>
+			<li className={home.showLit ? 'card' : ''}>
 				<div className="center-align hoverable">
 					<a href="#" className="waves-effect waves-yellow" onClick={() => {
 						actions.showLitPage();
@@ -49,7 +66,7 @@ const HeaderComponent = ({home, actions}) => {
 					</a>
 				</div>
 			</li>
-			<li className={home.showProg ? 'active' : ''}>
+			<li className={home.showProg ? 'card' : ''}>
 				<div className="center-align hoverable">
 					<a href="#" className="waves-effect waves-purple" onClick={() => {
 						actions.showProgPage();
@@ -58,7 +75,7 @@ const HeaderComponent = ({home, actions}) => {
 					</a>
 				</div>
 			</li>
-			<li className={home.showMovie ? 'active' : ''}>
+			<li className={home.showMovie ? 'card' : ''}>
 				<div className="center-align hoverable">
 					<a href="#" className="waves-effect waves-teal" onClick={() => {
 						actions.showMoviePage();
@@ -67,7 +84,7 @@ const HeaderComponent = ({home, actions}) => {
 					</a>
 				</div>
 			</li>
-			<li className={home.showMusic ? 'active' : ''}>
+			<li className={home.showMusic ? 'card' : ''}>
 				<div className="center-align hoverable">
 					<a href="#" className="waves-effect waves-orange" onClick={() => {
 						actions.showMusicPage();
@@ -76,7 +93,7 @@ const HeaderComponent = ({home, actions}) => {
 					</a>
 				</div>
 			</li>
-			<li className={home.showRamb ? 'active' : ''}>
+			<li className={home.showRamb ? 'card' : ''}>
 				<div className="center-align hoverable">
 					<a href="#" className="waves-effect waves-red" onClick={() => {
 						actions.showRambPage();
@@ -85,7 +102,7 @@ const HeaderComponent = ({home, actions}) => {
 					</a>
 				</div>
 			</li>
-			<li className={home.showTV ? 'active' : ''}>
+			<li className={home.showTV ? 'card' : ''}>
 				<div className="center-align hoverable">
 					<a href="#" className="waves-effect waves-teal" onClick={() => {
 						actions.showTVPage();
@@ -94,7 +111,7 @@ const HeaderComponent = ({home, actions}) => {
 					</a>
 				</div>
 			</li>
-			<li className={home.showGame ? 'active' : ''}>
+			<li className={home.showGame ? 'card' : ''}>
 				<div className="center-align hoverable">
 					<a href="#" className="waves-effect waves-green" onClick={() => {
 						actions.showGamePage();

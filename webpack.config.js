@@ -52,7 +52,7 @@ module.exports = {
             //Fonts
             {
                 loader: 'url?limit=10000&name=[name].[ext]',
-                test: /\.(ttf|eot|svg|woff|woff2)$/
+                test: /\.(ttf|eot|svg|woff|woff2)/
             }
         ]
     },
