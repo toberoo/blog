@@ -2,7 +2,7 @@ import constants from './../action/const.jsx'
 
 const initialState = {
 	title: 'K I D T R O C I O U S',
-	headerColour: 'black',
+	headerColour: '',
 	twitterURL: 'http://twitter.com/kidtrocious',
 	soundcloudURL: 'http://soundcloud.com/kidtrocious'
 }

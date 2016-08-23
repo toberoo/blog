@@ -25,7 +25,7 @@ const showAboutPage = () => {
 
 const loadAboutPage = () => {
 	return (dispatch) => {
-		dispatch(changeHeaderColour('black'))
+		dispatch(changeHeaderColour(''))
 		dispatch(showPage(constants.PAGES.ABOUT))
 	}
 }
@@ -39,7 +39,7 @@ const showLitPage = () => {
 
 const showRambPage = () => {
 	return (dispatch) => {
-		dispatch(changeHeaderColour('red lighten-2'))
+		dispatch(changeHeaderColour('red'))
 		dispatch(showPage(constants.PAGES.RAMB))
 	}
 }
@@ -67,7 +67,7 @@ const showMusicPage = () => {
 
 const showTVPage = () => {
 	return (dispatch) => {
-		dispatch(changeHeaderColour('teal lighten-4'))
+		dispatch(changeHeaderColour('teal lighten-2'))
 		dispatch(showPage(constants.PAGES.TV))
 	}
 }
