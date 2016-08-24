@@ -4,16 +4,17 @@ const initialState = {
 	title: 'K I D T R O C I O U S',
 	headerColour: '',
 	twitterURL: 'http://twitter.com/kidtrocious',
-	soundcloudURL: 'http://soundcloud.com/kidtrocious'
+	soundcloudURL: 'http://soundcloud.com/kidtrocious',
+	showHome: true
 }
 
 function getVisiblePage(state, selected) {
 	return Object.assign({}, state, {
+		showHome: selected === constants.PAGES.HOME ? true : false,
 		showAbout: selected === constants.PAGES.ABOUT ? true: false,
 		showLit: selected === constants.PAGES.LIT ? true: false,
 		showRamb: selected === constants.PAGES.RAMB ? true: false,
 		showProg: selected === constants.PAGES.PROG ? true: false,
-		showMovie: selected === constants.PAGES.MOVIE ? true: false,
 		showMusic: selected === constants.PAGES.MUSIC ? true: false,
 		showTV: selected === constants.PAGES.TV ? true: false,
 		showGame: selected === constants.PAGES.GAME ? true: false

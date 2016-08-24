@@ -10,6 +10,7 @@ module.exports = {
 		MUSIC: 'music',
 		RAMB: 'ramblings',
 		TV: 'television',
-		GAME: 'games'
+		GAME: 'games',
+		HOME: 'home'
 	}
 }

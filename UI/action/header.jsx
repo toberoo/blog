@@ -25,8 +25,15 @@ const showAboutPage = () => {
 
 const loadAboutPage = () => {
 	return (dispatch) => {
-		dispatch(changeHeaderColour(''))
+		dispatch(changeHeaderColour('yellow darken-1'))
 		dispatch(showPage(constants.PAGES.ABOUT))
+	}
+}
+
+const loadHomePage = () => {
+	return (dispatch) => {
+		dispatch(changeHeaderColour(''))
+		dispatch(showPage(constants.PAGES.HOME))
 	}
 }
 
@@ -51,13 +58,6 @@ const showProgPage = () => {
 	}
 }
 
-const showMoviePage = () => {
-	return (dispatch) => {
-		dispatch(changeHeaderColour('teal lighten-2'))
-		dispatch(showPage(constants.PAGES.MOVIE))
-	}
-}
-
 const showMusicPage = () => {
 	return (dispatch) => {
 		dispatch(changeHeaderColour('orange lighten-2'))
@@ -74,8 +74,8 @@ const showTVPage = () => {
 
 const showGamePage = () => {
 	return (dispatch) => {
-		dispatch(changeHeaderColour('green lighten-2'))
-		dispatch(showPage(constants.PAGES.GAME))
+		dispatch(changeHeaderColour(''))
+		dispatch(showPage(constants.PAGES.HOME))
 	}
 }
 
@@ -86,8 +86,8 @@ module.exports = {
 	showLitPage,
 	showRambPage,
 	showProgPage,
-	showMoviePage,
 	showMusicPage,
 	showTVPage,
-	showGamePage
+	showGamePage,
+	loadHomePage
 }

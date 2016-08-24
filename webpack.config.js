@@ -53,6 +53,10 @@ module.exports = {
             {
                 loader: 'url?limit=10000&name=[name].[ext]',
                 test: /\.(ttf|eot|svg|woff|woff2)/
+            },
+            {
+                loader: 'url?limit=10000&name=[hash].[ext]',
+                test: /\.(jpeg|jpg|png)/
             }
         ]
     },
