@@ -1,1 +1,1 @@
-My blog application using react, redux, webpack, node, express, mongodb, and sass.
+The front end for my blog application using react, redux, and webpack.
