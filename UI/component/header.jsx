@@ -70,7 +70,7 @@ const HeaderComponent = ({home, actions}) => {
 						</a>
 					</li>
 					<li>
-						<a href="http://google.com">
+						<a href={home.instagramURL}>
 							<i className="fa fa-instagram"></i>
 						</a>
 					</li>
@@ -80,18 +80,18 @@ const HeaderComponent = ({home, actions}) => {
 						</a>
 					</li>
 					<li>
-						<a href="http://google.com">
+						<a href={home.linkedinURL}>
 							<i className="fa fa-linkedin"></i>
 						</a>
 					</li>
 					<li>
-						<a href="http://google.com">
+						<a href={home.githubURL}>
 							<i className="fa fa-github"></i>
 						</a>
 					</li>
 					<li>
-						<a href="http://google.com">
-							<i className="fa fa-youtube"></i>
+						<a href={home.emailURL}>
+							<i className="fa fa-envelope"></i>
 						</a>
 					</li>
 				</ul>

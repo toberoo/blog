@@ -89,5 +89,6 @@ module.exports = {
 	showMusicPage,
 	showTVPage,
 	showGamePage,
-	loadHomePage
+	loadHomePage,
+	loadAboutPage
 }

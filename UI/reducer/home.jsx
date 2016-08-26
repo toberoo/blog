@@ -4,7 +4,11 @@ const initialState = {
 	title: 'K I D T R O C I O U S',
 	headerColour: '',
 	twitterURL: 'http://twitter.com/kidtrocious',
+	instagramURL: 'https://www.instagram.com/kidtrocious',
 	soundcloudURL: 'http://soundcloud.com/kidtrocious',
+	linkedinURL: 'https://www.linkedin.com/in/shehroze-khan-a2884669',
+	githubURL: 'https://github.com/toberoo',
+	emailURL: 'mailto:toberoo@gmail.com',
 	showHome: true
 }
 
