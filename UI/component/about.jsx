@@ -8,8 +8,8 @@ const about = () => {
 				<div className="card">
 					<div className="card-content flow-text">
 						<blockquote>
-							Somewhere between my open source projects, my pages of novel planning, and my unfinished albums, 
-							I decided to create this website. What started as an excuse for me to meld React/Redux with Materialize 
+							Somewhere between my open source projects, my pages of novel planning, and my unfinished albums,
+							I decided to create this website. What started as an excuse for me to meld React/Redux with Materialize
 							became a little more. Another blog. Another website. Another joker spreading his nonsense into the world. Enjoy!
 						</blockquote>
 					</div>

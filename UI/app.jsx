@@ -13,14 +13,13 @@ import { Router, Route, hashHistory } from 'react-router'
 //Get the root container
 import Root from './container/root.jsx'
 
-//Route components
-import About from './component/about.jsx'
-
 render(
   <Provider store={store}>
       <Router history={hashHistory}>
         	<Route path="/" component={Root}>
-        		<Route path="/about" component={About}/>
+        		<Route path="/about"/>
+        		<Route path="/programming"/>
+        		<Route path="/music"/>
         	</Route>
       </Router>
   </Provider>,

@@ -1,15 +1,14 @@
 import React from 'react'
 
-const HeaderComponent = ({home, actions}) => {
-
+const HeaderComponent = ({nav, actions}) => {
 	return <header>
-		<nav className={home.headerColour}>
+		<nav className={nav.headerColour}>
 			<div className="nav-wrapper">
 				<a href="#" className="brand-logo left" onClick={() => {
-					actions.loadHomePage();
+					actions.showHomePage();
 				}}>Kidtrocious</a>
 				<ul id="nav-mobile" className="right hide-on-med-and-down">
-					<li className={home.showAbout ? 'active' : ''}>
+					<li className={nav.showAbout ? 'active' : ''}>
 						<div className="center-align hoverable">
 							<a href="#" className="waves-effect" onClick={(e) => {
 								e.preventDefault()
@@ -19,34 +18,37 @@ const HeaderComponent = ({home, actions}) => {
 							</a>
 						</div>
 					</li>
-					<li className={home.showProg ? 'active' : ''}>
+					<li className={nav.showProg ? 'active' : ''}>
 						<div className="center-align hoverable">
-							<a href="#" className="waves-effect waves-purple" onClick={() => {
-								actions.showProgPage();
+							<a href="#" className="waves-effect waves-purple" onClick={(e) => {
+								e.preventDefault()
+								actions.showProgPage()
 							}}>
 								<b>Programming</b>
 							</a>
 						</div>
 					</li>
-					<li className={home.showMusic ? 'active' : ''}>
+					<li className={nav.showMusic ? 'active' : ''}>
 						<div className="center-align hoverable">
-							<a href="#" className="waves-effect waves-orange" onClick={() => {
+							<a href="#" className="waves-effect waves-orange" onClick={(e) => {
+								e.preventDefault()
 								actions.showMusicPage();
 							}}>
 								<b>Music</b>
 							</a>
 						</div>
 					</li>
-					<li className={home.showRamb ? 'active' : ''}>
+					<li className={nav.showRamb ? 'active' : ''}>
 						<div className="center-align hoverable">
-							<a href="#" className="waves-effect waves-red" onClick={() => {
+							<a href="#" className="waves-effect waves-red" onClick={(e) => {
+								e.preventDefault()
 								actions.showRambPage();
 							}}>
 								<b>Ramblings</b>
 							</a>
 						</div>
 					</li>
-					<li className={home.showTV ? 'active' : ''}>
+					<li className={nav.showTV ? 'active' : ''}>
 						<div className="center-align hoverable">
 							<a href="#" className="waves-effect waves-teal" onClick={() => {
 								actions.showTVPage();
@@ -55,7 +57,7 @@ const HeaderComponent = ({home, actions}) => {
 							</a>
 						</div>
 					</li>
-					<li className={home.showGame ? 'active' : ''}>
+					<li className={nav.showGame ? 'active' : ''}>
 						<div className="center-align hoverable">
 							<a href="#" className="waves-effect waves-green" onClick={() => {
 								actions.showGamePage();
@@ -65,7 +67,7 @@ const HeaderComponent = ({home, actions}) => {
 						</div>
 					</li>
 					<li>
-						<a href={home.twitterURL}>
+						<a href={nav.twitterURL}>
 							<i className="fa fa-twitter"></i>
 						</a>
 					</li>
@@ -75,7 +77,7 @@ const HeaderComponent = ({home, actions}) => {
 						</a>
 					</li>
 					<li>
-						<a href={home.soundcloudURL}>
+						<a href={nav.soundcloudURL}>
 							<i className="fa fa-soundcloud"></i>
 						</a>
 					</li>

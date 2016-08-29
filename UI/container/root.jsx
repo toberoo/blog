@@ -1,27 +1,43 @@
 import React, { Component} from 'react'
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+
+import navActions from './../action/nav.jsx'
+
 import Main from './../component/main.jsx'
-import actions from './../action/actions.jsx'
+import About from './../component/about.jsx'
+import Prog from './../component/programming.jsx'
+import Music from './../component/music.jsx'
 
 class RootContainer extends Component  {
+
+	//Helper function to display the correct page
+	getPage() {
+		let state = this.props.nav
+		if (state.showAbout)
+			return <About/>
+		if (state.showProg)
+			return <Prog/>
+		if (state.showMusic)
+			return <Music/>
+	}
+
 	render() {
-		return <Main home={this.props.home} actions={this.props.actions}>
-			{this.props.children}
+		return <Main nav={this.props.nav} actions={this.props.navActions}>
+			{this.getPage()}
 		</Main>
 	}
 }
 
 function mapStateToProps(state) {
 	return {
-		home: state.home,
-		location: state.routing.location
+		nav: state.nav
 	}
 }
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators(actions, dispatch)
+		navActions: bindActionCreators(navActions, dispatch)
 	}
 }
 

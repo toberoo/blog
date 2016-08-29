@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from './header.jsx'
 
-const main = ({home, actions, children}) => {
+const main = ({nav, actions, children}) => {
 	return <div className="main">
-			<Header home={home} actions={actions}/>
+			<Header nav={nav} actions={actions}/>
 			<div className="container">
 				{children}
 			</div>
