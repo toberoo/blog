@@ -8,18 +8,23 @@ import Main from './../component/main.jsx'
 import About from './../component/about.jsx'
 import Prog from './../component/programming.jsx'
 import Music from './../component/music.jsx'
+import Ramblings from './../component/ramblings.jsx'
+import FilmTVBooks from './../component/filmTVBooks.jsx'
+import Games from './../component/games.jsx'
 
 class RootContainer extends Component  {
 
 	//Helper function to display the correct page
 	getPage() {
 		let state = this.props.nav
-		if (state.showAbout)
-			return <About/>
-		if (state.showProg)
-			return <Prog/>
-		if (state.showMusic)
-			return <Music/>
+		switch(true) {
+			case state.showAbout: return <About/>
+			case state.showProg: return <Prog/>
+			case state.showMusic: return <Music/>
+			case state.showRamb: return <Ramblings/>
+			case state.showFilmTVBooks: return <FilmTVBooks/>
+			case state.showGames: return <Games/>
+		}
 	}
 
 	render() {
@@ -31,7 +36,8 @@ class RootContainer extends Component  {
 
 function mapStateToProps(state) {
 	return {
-		nav: state.nav
+		nav: state.nav,
+		routing: state.routing.location
 	}
 }
 

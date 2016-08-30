@@ -20,6 +20,9 @@ render(
         		<Route path="/about"/>
         		<Route path="/programming"/>
         		<Route path="/music"/>
+            <Route path="/ramblings"/>
+            <Route path="/filmtvbooks"/>
+            <Route path="/games"/>
         	</Route>
       </Router>
   </Provider>,

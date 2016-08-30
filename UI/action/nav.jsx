@@ -25,46 +25,32 @@ const showMusicPage = () => {
 	}
 }
 
-const showLitPage = () => {
-	return (dispatch) => {
-		dispatch(routeActions.push('literature'))
-		//dispatch(changeHeaderColour('amber lighten-2'))
-		//dispatch(showPage(constants.PAGES.LIT))
-	}
-}
-
 const showRambPage = () => {
 	return (dispatch) => {
 		dispatch(routeActions.push('ramblings'))
-		//dispatch(changeHeaderColour('red'))
-		//dispatch(showPage(constants.PAGES.RAMB))
 	}
 }
 
-const showTVPage = () => {
+const showFilmTVBooksPage = () => {
 	return (dispatch) => {
-		dispatch(routeActions.push('filmtv'))
-		//dispatch(changeHeaderColour('teal lighten-2'))
-		//dispatch(showPage(constants.PAGES.TV))
+		dispatch(routeActions.push('filmtvbooks'))
 	}
 }
+
 
 const showGamePage = () => {
 	return (dispatch) => {
 		dispatch(routeActions.push('games'))
-		//dispatch(changeHeaderColour(''))
-		//dispatch(showPage(constants.PAGES.HOME))
 	}
 }
 
 //Only actions called by the UI directly will be shown.
 module.exports = {
 	showAboutPage,
-	showLitPage,
-	showRambPage,
 	showProgPage,
 	showMusicPage,
-	showTVPage,
+	showRambPage,
+	showFilmTVBooksPage,
 	showGamePage,
 	showHomePage
 }

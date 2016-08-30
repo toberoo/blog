@@ -3,7 +3,9 @@ import Header from './header.jsx'
 
 const main = ({nav, actions, children}) => {
 	return <div className="main">
-			<Header nav={nav} actions={actions}/>
+			<div>
+				<Header nav={nav} actions={actions}/>
+			</div>
 			<div className="container">
 				{children}
 			</div>

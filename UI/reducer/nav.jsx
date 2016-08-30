@@ -9,12 +9,14 @@ const initialState = {
 	showHome: true
 }
 
-const reset = {
+const resetState = {
 	headerColour: '',
 	showAbout: false,
 	showProg: false,
 	showMusic: false,
-	showRamb: false
+	showRamb: false,
+	showFilmTVBooks: false,
+	showGames: false
 }
 
 module.exports = function(state = initialState, action) {
@@ -22,15 +24,12 @@ module.exports = function(state = initialState, action) {
 
 		case UPDATE_LOCATION: {
 			let path = action.payload.pathname;
-			let newState = Object.assign({}, state, {
-				showAbout: false,
-				showProg: false
-			})
+			let newState = Object.assign({}, state, resetState)
 
 			switch(path) {
 
 				case '/': {
-					return Object.assign({}, newState, reset)
+					return Object.assign({}, newState, newState)
 				}
 
 				case '/about': {
@@ -56,8 +55,22 @@ module.exports = function(state = initialState, action) {
 
 				case '/ramblings': {
 					return Object.assign({}, newState, {
-						headerColour: 'orange lighten-2',
-						showMusic: true
+						headerColour: 'red',
+						showRamb: true
+					})
+				}
+
+				case '/filmtvbooks': {
+					return Object.assign({}, newState, {
+						headerColour: 'teal lighten-2',
+						showFilmTVBooks: true
+					})
+				}
+
+				case '/games': {
+					return Object.assign({}, newState, {
+						headerColour: 'green',
+						showGames: true
 					})
 				}
 

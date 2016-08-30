@@ -32,7 +32,7 @@ const HeaderComponent = ({nav, actions}) => {
 						<div className="center-align hoverable">
 							<a href="#" className="waves-effect waves-orange" onClick={(e) => {
 								e.preventDefault()
-								actions.showMusicPage();
+								actions.showMusicPage()
 							}}>
 								<b>Music</b>
 							</a>
@@ -48,19 +48,21 @@ const HeaderComponent = ({nav, actions}) => {
 							</a>
 						</div>
 					</li>
-					<li className={nav.showTV ? 'active' : ''}>
+					<li className={nav.showFilmTVBooks ? 'active' : ''}>
 						<div className="center-align hoverable">
-							<a href="#" className="waves-effect waves-teal" onClick={() => {
-								actions.showTVPage();
+							<a href="#" className="waves-effect waves-teal" onClick={(e) => {
+								e.preventDefault()
+								actions.showFilmTVBooksPage()
 							}}>
-								<b>Film/TV</b>
+								<b>Film/TV/Books</b>
 							</a>
 						</div>
 					</li>
-					<li className={nav.showGame ? 'active' : ''}>
+					<li className={nav.showGames ? 'active' : ''}>
 						<div className="center-align hoverable">
-							<a href="#" className="waves-effect waves-green" onClick={() => {
-								actions.showGamePage();
+							<a href="#" className="waves-effect waves-green" onClick={(e) => {
+								e.preventDefault()
+								actions.showGamePage()
 							}}>
 								<b>Games</b>
 							</a>
@@ -72,7 +74,7 @@ const HeaderComponent = ({nav, actions}) => {
 						</a>
 					</li>
 					<li>
-						<a href="http://google.com">
+						<a href={nav.instagramURL}>
 							<i className="fa fa-instagram"></i>
 						</a>
 					</li>
@@ -82,18 +84,18 @@ const HeaderComponent = ({nav, actions}) => {
 						</a>
 					</li>
 					<li>
-						<a href="http://google.com">
+						<a href={nav.linkedinURL}>
 							<i className="fa fa-linkedin"></i>
 						</a>
 					</li>
 					<li>
-						<a href="http://google.com">
+						<a href={nav.githubURL}>
 							<i className="fa fa-github"></i>
 						</a>
 					</li>
 					<li>
-						<a href="http://google.com">
-							<i className="fa fa-youtube"></i>
+						<a href={nav.emailURL}>
+							<i className="fa fa-envelope"></i>
 						</a>
 					</li>
 				</ul>
@@ -101,8 +103,5 @@ const HeaderComponent = ({nav, actions}) => {
 		</nav>
 	</header>
 }
-/*
-
-					*/
 
 export default HeaderComponent
