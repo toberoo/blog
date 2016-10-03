@@ -13,44 +13,22 @@ const showAboutPage = () => {
 	}
 }
 
-const showProgPage = () => {
+const showArticlePage = () => {
 	return (dispatch) => {
-		dispatch(routeActions.push('programming'))
+		dispatch(routeActions.push('article'))
 	}
 }
 
-const showMusicPage = () => {
+const showTagPage = () => {
 	return (dispatch) => {
-		dispatch(routeActions.push('music'))
-	}
-}
-
-const showRambPage = () => {
-	return (dispatch) => {
-		dispatch(routeActions.push('ramblings'))
-	}
-}
-
-const showFilmTVBooksPage = () => {
-	return (dispatch) => {
-		dispatch(routeActions.push('filmtvbooks'))
-	}
-}
-
-
-const showGamePage = () => {
-	return (dispatch) => {
-		dispatch(routeActions.push('games'))
+		dispatch(routeActions.push('tag'))
 	}
 }
 
 //Only actions called by the UI directly will be shown.
 module.exports = {
 	showAboutPage,
-	showProgPage,
-	showMusicPage,
-	showRambPage,
-	showFilmTVBooksPage,
-	showGamePage,
+	showArticlePage,
+	showTagPage,
 	showHomePage
 }

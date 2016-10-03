@@ -6,7 +6,7 @@ const HeaderComponent = ({nav, actions}) => {
 			<div className="nav-wrapper">
 				<a href="#" className="brand-logo left" onClick={() => {
 					actions.showHomePage();
-				}}>Kidtrocious</a>
+				}}>{nav.title}</a>
 				<ul id="nav-mobile" className="right hide-on-med-and-down">
 					<li className={nav.showAbout ? 'active' : ''}>
 						<div className="center-align hoverable">
@@ -18,53 +18,23 @@ const HeaderComponent = ({nav, actions}) => {
 							</a>
 						</div>
 					</li>
-					<li className={nav.showProg ? 'active' : ''}>
+					<li className={nav.showArticle ? 'active' : ''}>
 						<div className="center-align hoverable">
 							<a href="#" className="waves-effect waves-purple" onClick={(e) => {
 								e.preventDefault()
-								actions.showProgPage()
+								actions.showArticlePage()
 							}}>
-								<b>Programming</b>
+								<b>Articles</b>
 							</a>
 						</div>
 					</li>
-					<li className={nav.showMusic ? 'active' : ''}>
+					<li className={nav.showTag ? 'active' : ''}>
 						<div className="center-align hoverable">
 							<a href="#" className="waves-effect waves-orange" onClick={(e) => {
 								e.preventDefault()
-								actions.showMusicPage()
+								actions.showTagPage()
 							}}>
-								<b>Music</b>
-							</a>
-						</div>
-					</li>
-					<li className={nav.showRamb ? 'active' : ''}>
-						<div className="center-align hoverable">
-							<a href="#" className="waves-effect waves-red" onClick={(e) => {
-								e.preventDefault()
-								actions.showRambPage();
-							}}>
-								<b>Ramblings</b>
-							</a>
-						</div>
-					</li>
-					<li className={nav.showFilmTVBooks ? 'active' : ''}>
-						<div className="center-align hoverable">
-							<a href="#" className="waves-effect waves-teal" onClick={(e) => {
-								e.preventDefault()
-								actions.showFilmTVBooksPage()
-							}}>
-								<b>Film/TV/Books</b>
-							</a>
-						</div>
-					</li>
-					<li className={nav.showGames ? 'active' : ''}>
-						<div className="center-align hoverable">
-							<a href="#" className="waves-effect waves-green" onClick={(e) => {
-								e.preventDefault()
-								actions.showGamePage()
-							}}>
-								<b>Games</b>
+								<b>Tags</b>
 							</a>
 						</div>
 					</li>

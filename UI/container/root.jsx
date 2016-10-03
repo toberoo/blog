@@ -6,11 +6,9 @@ import navActions from './../action/nav.jsx'
 
 import Main from './../component/main.jsx'
 import About from './../component/about.jsx'
-import Prog from './../component/programming.jsx'
-import Music from './../component/music.jsx'
-import Ramblings from './../component/ramblings.jsx'
-import FilmTVBooks from './../component/filmTVBooks.jsx'
-import Games from './../component/games.jsx'
+import Articles from './../component/articleList.jsx'
+import Tags from './../component/tagList.jsx'
+
 
 class RootContainer extends Component  {
 
@@ -19,11 +17,8 @@ class RootContainer extends Component  {
 		let state = this.props.nav
 		switch(true) {
 			case state.showAbout: return <About/>
-			case state.showProg: return <Prog/>
-			case state.showMusic: return <Music/>
-			case state.showRamb: return <Ramblings/>
-			case state.showFilmTVBooks: return <FilmTVBooks/>
-			case state.showGames: return <Games/>
+			case state.showArticle: return <Articles/>
+			case state.showTag: return <Tags/>
 		}
 	}
 

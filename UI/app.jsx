@@ -18,11 +18,8 @@ render(
       <Router history={hashHistory}>
         	<Route path="/" component={Root}>
         		<Route path="/about"/>
-        		<Route path="/programming"/>
-        		<Route path="/music"/>
-            <Route path="/ramblings"/>
-            <Route path="/filmtvbooks"/>
-            <Route path="/games"/>
+        		<Route path="/article"/>
+        		<Route path="/tag"/>
         	</Route>
       </Router>
   </Provider>,
